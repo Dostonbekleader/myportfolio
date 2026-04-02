@@ -3,9 +3,9 @@
    ============================================================ */
 
 :root {
-  --bg: linear-gradient(135deg,  #603f88,rgb(212, 208, 94)d);
-  --surface:linear-gradient(135deg, #331e5a, #613066, #2f3181,#52608f);
-  --border: linear-gradient(135deg, #468579, #1e3876, #2f3181,#1f195e); 
+  --bg: linear-gradient(135deg,  #19630f,rgb(212, 208, 94)d);
+  --surface:linear-gradient(135deg, #371a6c, #362a72, #242681,#52608f);
+  --border:  #191b7e; 
 
   --accent: #4cb572;
   --accent2: #06b6d4;
