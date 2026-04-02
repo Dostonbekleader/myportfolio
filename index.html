@@ -2,7 +2,12 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a254b">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="description" content="Dostonbek Ismonov — Bilgisayar Mühendisi Portfolio">
 <title>Portfolio | Dostonbek Ismonov</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -31,6 +36,16 @@
     <li><a href="#contact" data-tr="İletişim"  data-en="Contact" data-ru="Контакт"  data-uz="Aloqa">İletişim</a></li>
   </ul>
 
+  <!-- MOBİL HAMBURGER BUTTON -->
+  <button class="hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- HAMBURGEr MENU BUTTON -->
+  <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
   <!-- DİL SEÇİCİ -->
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLang('tr')">TR</button>
@@ -39,6 +54,24 @@
     <button class="lang-btn" onclick="setLang('uz')">UZ</button>
   </div>
 </nav>
+
+<!-- MOBİL MENÜ (tam ekran overlay) -->
+<ul class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigasyon Menüsü">
+  <li><a href="#about"      class="menu-link" data-tr="Hakkımda"  data-en="About"      data-ru="Обо мне"  data-uz="Men haqimda">Hakkımda</a></li>
+  <li><a href="#skills"     class="menu-link" data-tr="Beceriler" data-en="Skills"     data-ru="Навыки"   data-uz="Ko'nikmalar">Beceriler</a></li>
+  <li><a href="#projects"   class="menu-link" data-tr="Projeler"  data-en="Projects"   data-ru="Проекты"  data-uz="Loyihalar">Projeler</a></li>
+  <li><a href="#experience" class="menu-link" data-tr="Deneyim"   data-en="Experience" data-ru="Опыт"     data-uz="Tajriba">Deneyim</a></li>
+  <li><a href="#contact"    class="menu-link" data-tr="İletişim"  data-en="Contact"    data-ru="Контакт"  data-uz="Aloqa">İletişim</a></li>
+</ul>
+
+<!-- MOBİL MENU -->
+<ul class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobil Menü">
+  <li><a href="#about"      onclick="closeMobileMenu()" data-tr="Hakkımda"  data-en="About"      data-ru="Обо мне"  data-uz="Men haqimda">Hakkımda</a></li>
+  <li><a href="#skills"     onclick="closeMobileMenu()" data-tr="Beceriler" data-en="Skills"     data-ru="Навыки"   data-uz="Ko'nikmalar">Beceriler</a></li>
+  <li><a href="#projects"   onclick="closeMobileMenu()" data-tr="Projeler"  data-en="Projects"   data-ru="Проекты"  data-uz="Loyihalar">Projeler</a></li>
+  <li><a href="#experience" onclick="closeMobileMenu()" data-tr="Deneyim"   data-en="Experience" data-ru="Опыт"     data-uz="Tajriba">Deneyim</a></li>
+  <li><a href="#contact"    onclick="closeMobileMenu()" data-tr="İletişim"  data-en="Contact"    data-ru="Контакт"  data-uz="Aloqa">İletişim</a></li>
+</ul>
 
 <!-- ============================================================
      HERO
@@ -333,8 +366,8 @@
           Python proxy server ile çalışan offline İngilizce öğrenme uygulaması. Kelime öğrenme, yazma pratiği, dersler ve ilerleme raporu özelliklerine sahip.
         </p>
         <div class="project-links">
-          <a href="[GITHUB_LINK]" class="project-link" target="_blank">GitHub →</a>
-          <a href="[DEMO_LINK]" class="project-link" target="_blank">Demo →</a>
+          <a href="https://github.com/Dostonbekleader/algoritma" class="project-link" target="_blank">GitHub →</a>
+         <!-- <a href="[DEMO_LINK]" class="project-link" target="_blank">Demo →</a>-->
         </div>
       </div>
     </div>
@@ -356,8 +389,8 @@
           Türkçe hazırlanmış, 20 konudan oluşan interaktif Linux öğrenme uygulaması. Temel komutlardan ileri seviye konulara kadar kapsamlı içerik sunar.
         </p>
         <div class="project-links">
-          <a href="[GITHUB_LINK]" class="project-link" target="_blank">GitHub →</a>
-          <a href="[DEMO_LINK]" class="project-link" target="_blank">Demo →</a>
+          <a href="https://github.com/Dostonbekleader/algoritma" class="project-link" target="_blank">GitHub →</a>
+         <!-- <a href="[DEMO_LINK]" class="project-link" target="_blank">Demo →</a>-->
         </div>
       </div>
     </div>
@@ -379,8 +412,8 @@
           Türkçe çevirili A1 seviye İngilizce kelime öğrenme uygulaması. İnteraktif testler ve tekrar sistemi ile kalıcı öğrenmeyi destekler.
         </p>
         <div class="project-links">
-          <a href="[GITHUB_LINK]" class="project-link" target="_blank">GitHub →</a>
-          <a href="[DEMO_LINK]" class="project-link" target="_blank">Demo →</a>
+          <a href="https://github.com/Dostonbekleader/algoritma" class="project-link" target="_blank">GitHub →</a>
+          <!--<a href="[DEMO_LINK]" class="project-link" target="_blank">Demo →</a>-->
         </div>
       </div>
     </div>
@@ -403,7 +436,7 @@
           Kali Linux ve TP-Link TL-WN722N adaptörü kullanarak gerçekleştirilen kablosuz ağ güvenlik araştırması. Monitor mode, packet injection ve trafik analizi içerir.
         </p>
         <div class="project-links">
-          <a href="[GITHUB_LINK]" class="project-link" target="_blank">GitHub →</a>
+          <a href="https://github.com/Dostonbekleader/algoritma" class="project-link" target="_blank">GitHub →</a>
         </div>
       </div>
     </div>
@@ -424,7 +457,7 @@
           Python ile geliştirilmiş Telegram alışveriş botu. Komut tabanlı yapısı ile kullanıcı etkileşimini otomatikleştirir ve ürün yönetimi sağlar.
         </p>
         <div class="project-links">
-          <a href="[GITHUB_LINK]" class="project-link" target="_blank">GitHub →</a>
+          <a href="https://github.com/Dostonbekleader/algoritma" class="project-link" target="_blank">GitHub →</a>
         </div>
       </div>
     </div>
@@ -680,7 +713,6 @@
 
     <a href="mailto:dostonbek.ismonov.1993@mail.ru" class="contact-email">
       dostonbek.ismonov.1993@mail.ru
-      <!-- ===== BURAYA E-POSTA ADRESİNİ YAZ ===== -->
     </a>
 
     <div class="social-links">
@@ -702,7 +734,7 @@
 <footer>
   <span>© 2026 Dostonbek Ismonov</span>
   <!-- ===== BURAYA ADINI SOYADINİ YAZ ===== -->
-  <<span style="color:var(--accent);"
+  <span style="color:var(--accent);"
   data-tr="Dostonbek Ismonov tarafından tasarlandı ve geliştirildi."
   data-en="Designed & developed by Dostonbek Ismonov."
   data-ru="Разработано и спроектировано Dostonbek Ismonov."
@@ -710,92 +742,169 @@
   Dostonbek Ismonov tarafından tasarlandı ve geliştirildi.
 </span>
 </footer>
-
-<!-- ============================================================
-     JAVASCRIPT — script.js dosyasına taşımak istersen:
-     <script src="script.js"></script> yap ve aşağıdaki kodu oraya al.
-     ============================================================ -->
 <script>
-  /* ---- Custom Cursor ---- */
-  const cursor   = document.getElementById('cursor');
-  const follower = document.getElementById('follower');
-  let mx = 0, my = 0, fx = 0, fy = 0;
+/* ================================================================
+   PORTFOLIO — Tüm JavaScript (PC + Android + iOS + Mac uyumlu)
+   ================================================================ */
 
+/* ---- 1. Custom Cursor (Sadece mouse cihazlarda) ---- */
+const cursor   = document.getElementById('cursor');
+const follower = document.getElementById('follower');
+
+if (cursor && follower && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  let mx = 0, my = 0, fx = 0, fy = 0;
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx - 5 + 'px';
-    cursor.style.top  = my - 5 + 'px';
+    cursor.style.left = (mx - 5) + 'px';
+    cursor.style.top  = (my - 5) + 'px';
   });
   (function animateFollower() {
     fx += (mx - fx) * 0.12;
     fy += (my - fy) * 0.12;
-    follower.style.left = fx - 18 + 'px';
-    follower.style.top  = fy - 18 + 'px';
+    follower.style.left = (fx - 18) + 'px';
+    follower.style.top  = (fy - 18) + 'px';
     requestAnimationFrame(animateFollower);
   })();
+} else {
+  if (cursor)   cursor.style.display   = 'none';
+  if (follower) follower.style.display = 'none';
+}
 
-  /* ---- Scroll Animations ---- */
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity   = '1';
-        e.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
+/* ---- 2. Hamburger / Mobil Menü ---- */
+const hamburger  = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
 
-  document.querySelectorAll('.project-card, .timeline-item, .edu-card, .stat-card').forEach(el => {
-    el.style.opacity   = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    obs.observe(el);
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('open')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
   });
 
-  /* ---- Dil Sistemi ----
-     Sayfaya data-tr / data-en / data-ru / data-uz eklenmiş her element
-     otomatik olarak seçilen dile geçer.
-     YENİ ELEMENT EKLERKEN: ilgili data-xx özelliklerini yaz, sistem halleder.
-  ---- */
-  let currentLang = 'tr';
-
-  function setLang(lang) {
-    currentLang = lang;
-
-    /* Tüm butonların active sınıfını güncelle */
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
-    });
-
-    /* data-[lang] özelliği olan tüm elementleri güncelle */
-    document.querySelectorAll(`[data-${lang}]`).forEach(el => {
-      const val = el.getAttribute(`data-${lang}`);
-      if (val) el.innerHTML = val;   /* innerHTML kullanıyoruz: <br> desteklemek için */
-    });
-
-    /* <html lang=""> güncelle (erişilebilirlik) */
-    document.documentElement.lang = lang;
-
-    /* Seçilen dili localStorage'a kaydet (sayfa yenilenince hatırlasın) */
-    try { localStorage.setItem('portfolio-lang', lang); } catch(e) {}
-  }
-
-  /* Sayfa açılınca son seçilen dili uygula */
-  (function init() {
-    let saved = 'tr';
-    try { saved = localStorage.getItem('portfolio-lang') || 'tr'; } catch(e) {}
-    setLang(saved);
-  })();
-
-  /* skills-cat-title için CSS (inline stil yerine buradan) */
-  document.querySelectorAll('.skills-cat-title').forEach(el => {
-    el.style.fontFamily   = "'Syne', sans-serif";
-    el.style.fontSize     = "14px";
-    el.style.color        = "var(--muted)";
-    el.style.letterSpacing = "2px";
-    el.style.textTransform = "uppercase";
-    el.style.marginBottom  = "20px";
+  /* Menü linklerine tıklayınca kapat */
+  mobileMenu.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
   });
+
+  /* ESC tuşuyla kapat */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMobileMenu();
+  });
+
+  /* Menü dışına (overlay) tıklayınca kapat */
+  mobileMenu.addEventListener('click', e => {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+/* ---- 3. Scroll Animasyonları ---- */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity   = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.project-card, .timeline-item, .edu-card, .stat-card').forEach(el => {
+  el.style.opacity    = '0';
+  el.style.transform  = 'translateY(30px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  obs.observe(el);
+});
+
+/* ---- 4. Dil Sistemi ----
+   data-tr / data-en / data-ru / data-uz özelliği olan her element
+   otomatik olarak seçilen dile geçer.
+---- */
+let currentLang = 'tr';
+
+function setLang(lang) {
+  currentLang = lang;
+
+  /* Dil butonlarını güncelle */
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim().toLowerCase() === lang);
+  });
+
+  /* data-[lang] özelliği olan tüm elementleri güncelle (hem desktop hem mobil menü) */
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (val) el.innerHTML = val;
+  });
+
+  /* HTML lang attribute güncelle (erişilebilirlik + SEO) */
+  document.documentElement.lang = lang;
+
+  /* LocalStorage'a kaydet */
+  try { localStorage.setItem('portfolio-lang', lang); } catch(e) {}
+}
+
+/* Sayfa açılınca son seçilen dili uygula */
+(function init() {
+  let saved = 'tr';
+  try { saved = localStorage.getItem('portfolio-lang') || 'tr'; } catch(e) {}
+  setLang(saved);
+})();
+
+/* ---- 5. Skills kategori başlıkları stili ---- */
+document.querySelectorAll('.skills-cat-title').forEach(el => {
+  el.style.fontFamily    = "'Syne', sans-serif";
+  el.style.fontSize      = '16px';
+  el.style.fontWeight    = '700';
+  el.style.color         = 'var(--white)';
+  el.style.marginBottom  = '16px';
+  el.style.letterSpacing = '-0.3px';
+});
+
+/* ---- 6. Nav scroll efekti ---- */
+const nav = document.querySelector('nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.background = 'rgba(26,37,75,0.97)';
+      nav.style.boxShadow  = '0 1px 0 rgba(255,255,255,0.05)';
+    } else {
+      nav.style.background = '';
+      nav.style.boxShadow  = '';
+    }
+  }, { passive: true });
+}
+
+/* ---- 7. Active nav link (scroll spy) ---- */
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a');
+
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + entry.target.id
+          ? 'var(--accent)' : '';
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -40% 0px' });
+
+sections.forEach(s => spy.observe(s));
+
 </script>
-
 </body>
 </html>
